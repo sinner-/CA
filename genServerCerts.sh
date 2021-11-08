@@ -23,7 +23,7 @@ chmod 400 nodes/$NODE/$NODE.key.pem
 
 EXTENSION="usr_cert"
 if [ $NODE == "openvpn" ]; then
-  openvpn --genkey --secret nodes/$NODE/tls-auth.pem
+  openvpn --genkey tls-crypt nodes/$NODE/tls-crypt.pem
   EXTENSION="server_cert"
 fi
 
